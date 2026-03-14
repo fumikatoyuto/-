@@ -2,7 +2,7 @@
 // ==========================================
 // 報酬のリンク（すべてクリアした際に表示されます）
 // 変更する場合は、このURLを書き換えてください。
-const REWARD_LINK = 'https://example.com';
+const REWARD_LINK = 'https://drive.google.com/drive/folders/16b74_RZlKA4bYrlmo8CsrM0AsI_XjoX3';
 // ==========================================
 
 const CONFIG = {
