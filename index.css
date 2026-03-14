@@ -7,14 +7,12 @@
     --neon-red: #ff3333;
     --font-main: 'Outfit', sans-serif;
 }
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     user-select: none;
 }
-
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -23,7 +21,6 @@ body {
     width: 100vw;
     height: 100vh;
 }
-
 #game-container {
     position: relative;
     width: 100%;
@@ -32,7 +29,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 canvas {
     position: absolute;
     top: 0;
@@ -41,7 +37,6 @@ canvas {
     height: 100%;
     z-index: 1;
 }
-
 #ui-layer {
     position: absolute;
     top: 0;
@@ -54,12 +49,10 @@ canvas {
     align-items: center;
     pointer-events: none; /* 下のキャンバスにイベントを通す */
 }
-
 /* UI要素はイベントを受け取るようにする */
 .screen, button, a {
     pointer-events: auto;
 }
-
 .screen {
     background: rgba(5, 5, 16, 0.85);
     backdrop-filter: blur(10px);
@@ -74,18 +67,15 @@ canvas {
     align-items: center;
     gap: 20px;
 }
-
 .screen.hidden {
     opacity: 0;
     pointer-events: none;
     display: none;
 }
-
 .title {
     font-size: 3rem;
     margin-bottom: 10px;
 }
-
 .glow-text {
     text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
 }
@@ -93,13 +83,34 @@ canvas {
 .glow-text.error { color: var(--neon-red); }
 .glow-text.success { color: var(--neon-green); }
 .glow-text.master { color: var(--neon-pink); }
-
 .subtitle {
     font-size: 1.2rem;
     color: #aaaaaa;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
-
+.game-description {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 350px;
+    color: #dddddd;
+}
+.game-description p {
+    margin-bottom: 10px;
+}
+.game-description p:last-child {
+    margin-bottom: 0;
+}
+.reward-notice {
+    color: var(--neon-pink);
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(255, 0, 186, 0.5);
+    margin-top: 10px;
+}
 .menu-buttons {
     display: flex;
     flex-direction: column;
@@ -107,7 +118,6 @@ canvas {
     width: 100%;
     min-width: 250px;
 }
-
 .btn {
     background: transparent;
     border: 2px solid;
@@ -122,7 +132,6 @@ canvas {
     font-weight: bold;
     letter-spacing: 2px;
 }
-
 .btn-easy {
     border-color: var(--neon-green);
     color: var(--neon-green);
@@ -132,7 +141,6 @@ canvas {
     color: var(--bg-color);
     box-shadow: 0 0 20px var(--neon-green);
 }
-
 .btn-normal {
     border-color: var(--neon-blue);
     color: var(--neon-blue);
@@ -142,7 +150,6 @@ canvas {
     color: var(--bg-color);
     box-shadow: 0 0 20px var(--neon-blue);
 }
-
 .btn-hard {
     border-color: var(--neon-pink);
     color: var(--neon-pink);
@@ -152,11 +159,9 @@ canvas {
     color: var(--bg-color);
     box-shadow: 0 0 20px var(--neon-pink);
 }
-
 .btn:hover {
     transform: scale(1.05);
 }
-
 .btn-secondary {
     border-color: #555;
     color: #ccc;
@@ -167,7 +172,6 @@ canvas {
     background: #555;
     color: white;
 }
-
 .reward-link {
     display: inline-block;
     margin-top: 20px;
@@ -181,12 +185,10 @@ canvas {
     box-shadow: 0 0 20px var(--neon-blue);
     transition: transform 0.2s, box-shadow 0.2s;
 }
-
 .reward-link:hover {
     transform: scale(1.1);
     box-shadow: 0 0 30px var(--neon-pink);
 }
-
 #hud-timer {
     position: absolute;
     top: 20px;
